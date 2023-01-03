@@ -5,7 +5,7 @@
 |:-:|:-:|
 |`ctrl + h`|打开左边的标签页|
 |`ctrl + l`|打开右边的标签页|
-|`alt + h|j|k|l`|上下左右聚焦分屏|
+|`alt + h\|j\|k\|l`|上下左右聚焦分屏|
 |`zc` & `zo`|折叠和打开代码块|
 
 ### shortcut instruction 
