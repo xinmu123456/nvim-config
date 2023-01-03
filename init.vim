@@ -16,10 +16,9 @@ imap jk <ESC>
 
 
 "---plugins---"
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
 " Plug 'scrooloose/nerdtree'
-
-call plug#end()
+"call plug#end()
 
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
