@@ -38,5 +38,7 @@ lua require('plugin-config/toggleterm')
 lua package.path = package.path .. ';/home/xinmu/.config/nvim/?.lua'
 lua require('lsp/setup')
 lua require('lsp/nvim-cmp')
+lua require('lsp/formatter')
+lua require('lsp/null-ls')
 "---map plugin to hot key---"
 " map <silent> <C-e> :NERDTreeToggle<CR>

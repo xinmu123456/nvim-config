@@ -17,5 +17,5 @@
 |指令|效果|
 |:-:|:-:|
 |`:TSBufToggle highlight`|打开代码高亮|
-|`Gitsigns preview_hunk`|快速预览git的变化|
+|`:Gitsigns preview_hunk`|快速预览git的变化|
 

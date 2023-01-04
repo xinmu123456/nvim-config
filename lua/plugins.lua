@@ -62,6 +62,10 @@ return require('packer').startup(function()
 
 --- toggleterm
   use({ "akinsho/toggleterm.nvim" })
+
+-- formatter
+  use("mhartington/formatter.nvim")
+  use({ "jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim" })
 ---------------- lspconfig -------------------
  
 --  use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'} -- old lsp Plug
