@@ -1,3 +1,4 @@
+-- all used plugins was loaded here
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -21,13 +22,48 @@ return require('packer').startup(function()
 -- treesitter
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
--- select airline
 -- nvim-lualine 
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
+-- dash board
+  use 'glepnir/dashboard-nvim'
+
+-- telescope
+  use {
+  "nvim-telescope/telescope.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons"
+    }
+  }
+-- 加速文件搜索速度,如果安装失败需要到插件目录执行make命令手动编译
+  use {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}
+
+-- auto pairs
+  use "windwp/nvim-autopairs"
+
+-- indent-blankline
+  use("lukas-reineke/indent-blankline.nvim")
+
+-- fidget
+  use("j-hui/fidget.nvim")
+
+-- git
+  use({ "lewis6991/gitsigns.nvim" })
+
+-- surround
+  use("ur4ltz/surround.nvim")
+
+-- comment 
+  use("numToStr/Comment.nvim")  
+
+--- toggleterm
+  use({ "akinsho/toggleterm.nvim" })
 ---------------- lspconfig -------------------
+ 
 --  use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'} -- old lsp Plug
   use({ "williamboman/mason.nvim" })
   use({ "williamboman/mason-lspconfig.nvim" })

@@ -24,6 +24,15 @@ lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
 lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/nvim-lualine')
+lua require('plugin-config/dashboard')
+lua require('plugin-config/telescope')
+lua require('plugin-config/nvim-autopairs')
+lua require('plugin-config/indent_blankline')
+lua require('plugin-config/fidget')
+lua require('plugin-config/gitsigns')
+lua require('plugin-config/surround')
+lua require('plugin-config/comment')
+lua require('plugin-config/toggleterm')
 "-- load custom configuration
 "-- config path
 lua package.path = package.path .. ';/home/xinmu/.config/nvim/?.lua'

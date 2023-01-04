@@ -1,3 +1,7 @@
+### 需要预先安装的包
+1. unzip
+2. ripgrep
+3. lazygit
 
 ### 常用快捷键表
 
@@ -13,4 +17,5 @@
 |指令|效果|
 |:-:|:-:|
 |`:TSBufToggle highlight`|打开代码高亮|
+|`Gitsigns preview_hunk`|快速预览git的变化|
 

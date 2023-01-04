@@ -17,8 +17,8 @@ map("n", "sc", "<C-w>c", opt)
 map("n", "so", "<C-w>o", opt) -- close others
 
 -- 比例控制（不常用，因为支持鼠标拖拽）
-map("n", "s>", ":vertical resize +20<CR>", opt)
-map("n", "s<", ":vertical resize -20<CR>", opt)
+map("n", "s,", ":vertical resize +10<CR>", opt)
+map("n", "s.", ":vertical resize -10<CR>", opt)
 map("n", "s=", "<C-w>=", opt)
 map("n", "sj", ":resize +10<CR>",opt)
 map("n", "sk", ":resize -10<CR>",opt)
@@ -30,7 +30,6 @@ map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
 -- 插件热键
-
 -- nvim-tree 配置ctrl + e 切换
 map('n', '<C-e>', ':NvimTreeToggle<CR>', opt)
 -- bufferline 左右Tab切换
@@ -85,7 +84,7 @@ pluginKeys.cmp = function(cmp)
     -- 确认
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ['<CR>'] = cmp.mapping.confirm({
+    ['<Tab>'] = cmp.mapping.confirm({
       select = true ,
       behavior = cmp.ConfirmBehavior.Replace
     }),
@@ -95,6 +94,37 @@ pluginKeys.cmp = function(cmp)
   }
 end
 
-return pluginKeys
+-- 代码注释插件
+-- see ./lua/plugin-config/comment.lua
+pluginKeys.comment = {
+  -- Normal 模式快捷键
+  toggler = {
+    line = "gcc", -- 行注释
+    block = "gbc", -- 块注释
+  },
+  -- Visual 模式
+  opleader = {
+    line = "gc",
+    bock = "gb",
+  },
+}
+-- ctrl + /
+map("n", "<C-_>", "gcc", { noremap = false })
+map("v", "<C-_>", "gcc", { noremap = false })
 
+-- 自定义 toggleterm 3个不同类型的命令行窗口
+-- <leader>ta 浮动
+-- <leader>tb 右侧
+-- <leader>tc 下方
+-- 特殊lazygit 窗口，需要安装lazygit
+-- <leader>tg lazygit
+pluginKeys.mapToggleTerm = function(toggleterm)
+  vim.keymap.set({ "n", "t" }, "<leader>ta", toggleterm.toggleA)
+  vim.keymap.set({ "n", "t" }, "<leader>tb", toggleterm.toggleB)
+  vim.keymap.set({ "n", "t" }, "<leader>tc", toggleterm.toggleC)
+  vim.keymap.set({ "n", "t" }, "<leader>tg", toggleterm.toggleG)
+  vim.keymap.set({ "n", "t" }, "<C-t>", toggleterm.toggleC)
+end
+
+return pluginKeys
 
