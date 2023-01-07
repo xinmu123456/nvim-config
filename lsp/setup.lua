@@ -18,38 +18,42 @@ end
 
 -- :h mason-default-settings
 -- ~/.local/share/nvim/mason
-mason.setup({
-  ui = {
-    icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗",
-    },
-  },
-})
+mason.setup(
+  {
+    ui = {
+      icons = {
+        package_installed = "✓",
+        package_pending = "➜",
+        package_uninstalled = "✗"
+      }
+    }
+  }
+)
 
 -- mason-lspconfig uses the `lspconfig` server names in the APIs it exposes - not `mason.nvim` package names
 -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
-mason_config.setup({
-  ensure_installed = {
-    "sumneko_lua",
---    "tsserver",
---    "tailwindcss",
---    "bashls",
---    "cssls",
---    "dockerls",
---    "emmet_ls",
---    "html",
-    "jsonls",
-    "pyright",
---    "rust_analyzer",
---    "taplo",
---    "yamlls",
---    "gopls",
-    "clangd",
---    "cmake",
-  },
-})
+mason_config.setup(
+  {
+    ensure_installed = {
+      "sumneko_lua",
+      "tsserver",
+      --    "tailwindcss",
+      --    "bashls",
+      --    "cssls",
+      --    "dockerls",
+      --    "emmet_ls",
+      --    "html",
+      "jsonls",
+      "pyright",
+      --    "rust_analyzer",
+      --    "taplo",
+      --    "yamlls",
+      --    "gopls",
+      "clangd"
+      --    "cmake",
+    }
+  }
+)
 
 -- 安装列表
 -- { key: 服务器名， value: 配置文件 }
@@ -73,6 +77,7 @@ local servers = {
   -- remark_ls = require("lsp.config.markdown"),
   clangd = require("lsp.config.clangd"),
   -- cmake = require("lsp.config.cmake"),
+  tsserver = require("lsp.config.js")
 }
 
 for name, config in pairs(servers) do
@@ -85,4 +90,4 @@ for name, config in pairs(servers) do
   end
 end
 
--- require("lsp.ui")
+require("lsp.ui")

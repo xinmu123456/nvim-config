@@ -3,6 +3,13 @@
 2. ripgrep
 3. lazygit
 
+### 需要在Mason中安装的LSP
+1. clangd
+2. typescript-language-server (注册名: tsserver)
+3. pyright
+4. lua-language-server (注册名: sumneko_lua)
+5. json-lsp (注册名: jsonls)
+
 ### 常用快捷键表
 
 |快捷键|效果|
