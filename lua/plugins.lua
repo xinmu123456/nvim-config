@@ -5,6 +5,7 @@ return require("packer").startup(
       -- Packer can manage itself
       use "wbthomason/packer.nvim"
       use "EdenEast/nightfox.nvim"
+      use "folke/tokyonight.nvim"
 
       -- Plug: nvim-tree
       use {
@@ -62,6 +63,12 @@ return require("packer").startup(
       -- formatter
       use("mhartington/formatter.nvim")
       use({"jose-elias-alvarez/null-ls.nvim", requires = "nvim-lua/plenary.nvim"})
+
+      --彩虹括号
+      use "luochen1990/rainbow"
+
+      -- github coplitot
+      use "github/copilot.vim"
       ---------------- lspconfig -------------------
 
       --  use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'} -- old lsp Plug
@@ -80,7 +87,8 @@ return require("packer").startup(
       use "rafamadriz/friendly-snippets"
       -- lspkind
       use "onsails/lspkind-nvim"
-
+      --lsp saga
+      use "glepnir/lspsaga.nvim"
       -- JSON 增强
       use("b0o/schemastore.nvim")
       -- Lua 增强

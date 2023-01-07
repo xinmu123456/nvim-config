@@ -18,4 +18,5 @@
 |:-:|:-:|
 |`:TSBufToggle highlight`|打开代码高亮|
 |`:Gitsigns preview_hunk`|快速预览git的变化|
+|`:Lspsaga <cmd>`|有一系列语言服务, 比如重命名, 查找定义, 打开大纲..|
 

@@ -9,7 +9,8 @@ lua require('keybindings')
 " 皮肤设置
 set background=dark " or light if you want light mode
 "colorscheme zephyr
-colorscheme nightfox
+" colorscheme nightfox
+colorscheme tokyonight
 
 "---key map---"
 imap jk <ESC>
@@ -40,5 +41,9 @@ lua require('lsp/setup')
 lua require('lsp/nvim-cmp')
 lua require('lsp/formatter')
 lua require('lsp/null-ls')
+lua require('lsp/ui')
 "---map plugin to hot key---"
 " map <silent> <C-e> :NERDTreeToggle<CR>
+
+" other
+let g:rainbow_active = 1
