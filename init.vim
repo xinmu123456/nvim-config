@@ -47,3 +47,6 @@ lua require('lsp/ui')
 
 " other
 let g:rainbow_active = 1
+
+" 在wsl时和windows共享剪贴板
+set clipboard^=unnamed,unnamedplus

@@ -77,7 +77,7 @@ local servers = {
   -- remark_ls = require("lsp.config.markdown"),
   clangd = require("lsp.config.clangd"),
   -- cmake = require("lsp.config.cmake"),
-  tsserver = require("lsp.config.js")
+  tsserver = require("lsp.config.tsserver")
 }
 
 for name, config in pairs(servers) do

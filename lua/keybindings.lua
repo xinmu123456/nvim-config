@@ -87,6 +87,21 @@ pluginKeys.cmp = function(cmp)
         c = cmp.mapping.close()
       }
     ),
+    -- 配置上下左右箭头
+    ["<Left>"] = cmp.mapping(
+      {
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close()
+      }
+    ),
+    ["<Right>"] = cmp.mapping(
+      {
+        i = cmp.mapping.abort(),
+        c = cmp.mapping.close()
+      }
+    ),
+    ["<Up>"] = cmp.mapping.select_prev_item(),
+    ["<Down>"] = cmp.mapping.select_next_item(),
     -- 确认
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
