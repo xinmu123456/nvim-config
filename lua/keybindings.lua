@@ -149,4 +149,7 @@ pluginKeys.mapToggleTerm = function(toggleterm)
   vim.keymap.set({"n", "t"}, "<C-t>", toggleterm.toggleC)
 end
 
+-- 个人偏好键
+map("i", "<C-j>", "<Esc>o", opt)
+
 return pluginKeys
